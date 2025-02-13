@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7S45K5V8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y7S45K5V8W');
+</script>
+    <title>SmartEcom - פלטפורמת ניהול עסקים</title>
+  </head>
+  <body>
+    <!-- Hidden forms for Netlify -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="discount-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="url" name="websiteUrl" />
+      <input type="email" name="email" />
+      <input type="text" name="appId" />
+      <input type="text" name="appName" />
+    </form>
+
+    <form name="submit-brand" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="brandName" />
+      <input type="url" name="website" />
+      <textarea name="description"></textarea>
+      <input type="text" name="contactName" />
+      <input type="email" name="email" />
+    </form>
+
+    <form name="register-agency" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="agencyName" />
+      <input type="url" name="website" />
+      <textarea name="services"></textarea>
+      <input type="text" name="contactName" />
+      <input type="email" name="email" />
+    </form>
+
+    <form name="submit-tool" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="toolName" />
+      <input type="url" name="website" />
+      <textarea name="description"></textarea>
+      <input type="text" name="category" />
+      <input type="text" name="contactName" />
+      <input type="email" name="email" />
+    </form>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 244 63 94;    /* rose-500 */
+    --color-secondary: 249 115 22; /* orange-500 */
+    --color-accent: 168 85 247;    /* purple-500 */
+    --color-background: 244 244 245; /* zinc-100 */
+  }
+
+  body {
+    background: rgb(var(--color-background));
+    background-image: 
+      radial-gradient(at 40% 20%, rgba(var(--color-primary), 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(var(--color-secondary), 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(var(--color-accent), 0.1) 0px, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/95 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+
+  .hover-card {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-orange-600;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-rose-600 to-orange-600 text-white rounded-lg 
+           shadow-lg hover:shadow-rose-500/30 transition-all duration-300 
+           hover:scale-105;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 bg-white text-black rounded-lg shadow-lg 
+           hover:shadow-rose-500/20 transition-all duration-300 
+           hover:scale-105 border border-gray-200;
+  }
+
+  .nav-link {
+    @apply relative px-3 py-2 text-sm font-medium transition-all duration-300;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-600 to-orange-600 
+           transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-rose-600;
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  /* Text color utilities */
+  .text-default {
+    @apply text-black;
+  }
+
+  .text-muted {
+    @apply text-gray-600;
+  }
+
+  .text-heading {
+    @apply text-black font-bold;
+  }
+}
